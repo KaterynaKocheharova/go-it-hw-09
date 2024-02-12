@@ -1,6 +1,6 @@
 // ============================================ INCLUDING SIMPLE LIGHTBOX ======================================
-
-import SimpleLightbox from 'simplelightbox';
+import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
+// import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 // =============================================== IMAGES FOR MARKUP ============================================
@@ -101,4 +101,10 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   //   ??? ??? ??? ??? ???
   //   spinner: true,
+  // captionClass: 'caption',
+  // swipeClose: true,
+  alertError: true,
+  alertErrorMessage: 'Image not found, next image will be loaded',
+  history: false,
+  // from rtl
 });
