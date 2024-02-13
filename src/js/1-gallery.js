@@ -99,12 +99,4 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionType: 'attr',
   captionsData: 'alt',
   captionDelay: 250,
-  //   ??? ??? ??? ??? ???
-  //   spinner: true,
-  // captionClass: 'caption',
-  // swipeClose: true,
-  alertError: true,
-  alertErrorMessage: 'Image not found, next image will be loaded',
-  history: false,
-  rtl: true,
 });
