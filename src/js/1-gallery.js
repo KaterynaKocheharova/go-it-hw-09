@@ -106,5 +106,5 @@ const lightbox = new SimpleLightbox('.gallery a', {
   alertError: true,
   alertErrorMessage: 'Image not found, next image will be loaded',
   history: false,
-  // from rtl
+  rtl: true,
 });
