@@ -7,5 +7,5 @@ import{S as n}from"./vendor-6f78bbeb.js";(function(){const o=document.createElem
           alt="${i}"
         />
       </a>
-    </li>`).join(" ");s.insertAdjacentHTML("afterbegin",l);new n(".gallery a",{captions:!0,captionSelector:"img",captionType:"attr",captionsData:"alt",captionDelay:250,alertError:!0,alertErrorMessage:"Image not found, next image will be loaded",history:!1});
-//# sourceMappingURL=1-gallery-5667e03f.js.map
+    </li>`).join(" ");s.insertAdjacentHTML("afterbegin",l);new n(".gallery a",{captions:!0,captionSelector:"img",captionType:"attr",captionsData:"alt",captionDelay:250,alertError:!0,alertErrorMessage:"Image not found, next image will be loaded",history:!1,rtl:!0});
+//# sourceMappingURL=1-gallery-036544c1.js.map
