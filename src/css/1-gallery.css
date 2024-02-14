@@ -47,17 +47,25 @@ img {
 }
 
 /* =========================================== GALLERY STYLING =============================================== */
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
 
 .container {
   max-width: 1158px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .gallery {
-  position: absolute;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
