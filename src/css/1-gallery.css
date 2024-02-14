@@ -88,3 +88,11 @@ html {
 .simple-lightbox-wrapper {
   background-color: rgba(46, 47, 66, 0.8);
 }
+
+.simple-lightbox-wrapper .sl-close {
+  color: white !important;
+}
+
+.simple-lightbox-wrapper .sl-prev {
+  background-color: white;
+}
