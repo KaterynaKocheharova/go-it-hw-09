@@ -83,6 +83,8 @@ const galleryMarkup = images
           class="gallery-image"
           src="${preview}"
           alt="${description}"
+          width="360"
+          height="200"
         />
       </a>
     </li>`;
@@ -99,13 +101,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionType: 'attr',
   captionsData: 'alt',
   captionDelay: 250,
-  afterShow: instance => {
-    // Find the active image container and add a class
-    const activeImageContainer = document.querySelector('.slbActive');
-    if (activeImageContainer) {
-      activeImageContainer.classList.add('custom-class');
-    }
-  },
+  className: 'simple-lightbox-wrapper',
 });
 
 // !!! як змінити позиціонування великого зображення

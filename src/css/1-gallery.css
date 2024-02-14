@@ -48,11 +48,16 @@ img {
 
 /* =========================================== GALLERY STYLING =============================================== */
 
-body {
-  padding: 24px 156px;
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .gallery {
+  position: absolute;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -67,4 +72,10 @@ body {
 .custom-class {
   position: absolute;
   translate: -5px -10px;
+}
+
+/* SIMPLE LIGHTBOX STYLES */
+
+.simple-lightbox-wrapper {
+  background-color: rgba(46, 47, 66, 0.8);
 }
