@@ -9,5 +9,5 @@ import{S as n}from"./vendor-6f78bbeb.js";(function(){const o=document.createElem
           height="200"
         />
       </a>
-    </li>`).join(" ");s.insertAdjacentHTML("afterbegin",l);new n(".gallery a",{captions:!0,captionSelector:"img",captionType:"attr",captionsData:"alt",captionDelay:250,className:"simple-lightbox-wrapper"});
-//# sourceMappingURL=1-gallery-b8ece856.js.map
+    </li>`).join(" ");s.insertAdjacentHTML("afterbegin",l);new n(".gallery a",{captions:!0,captionsData:"alt",captionDelay:250,className:"simple-lightbox-wrapper"});
+//# sourceMappingURL=1-gallery-08d4d4ae.js.map
