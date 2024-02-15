@@ -101,16 +101,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   className: 'simple-lightbox-wrapper',
 });
-
-// !!! як змінити позиціонування великого зображення
-// !!! чи можна у елементів бібліотеки змінити стилі звернувшись до їх класів
-
-// captionClass	''	string	adds an additional class(es) to the sl-caption use space or comma to add multiple classes.
-
-// className	'simple-lightbox'	string	adds a class to the wrapper of the lightbox
-
-// fixedClass	sl-fixed	string	elements with this class are fixed and get the right padding when lightbox opens
-
-// You can customize Simplelightbox by changing the style in simplelightbox.css.
-
-// If you are using SASS, you can customize Simplelightbox with the following variables

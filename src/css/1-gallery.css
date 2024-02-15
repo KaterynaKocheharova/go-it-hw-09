@@ -57,7 +57,6 @@ html {
 .container {
   max-width: 1158px;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-right: auto;
   margin-left: auto;
@@ -78,21 +77,24 @@ html {
   width: calc((100% - 48px) / 3);
 }
 
-.custom-class {
-  position: absolute;
-  translate: -5px -10px;
-}
-
-/* SIMPLE LIGHTBOX STYLES */
+/* ===================================== SIMPLE LIGHTBOX STYLES ================================ */
 
 .simple-lightbox-wrapper {
   background-color: rgba(46, 47, 66, 0.8);
 }
 
-.simple-lightbox-wrapper .sl-close {
-  color: white !important;
+.simple-lightbox-wrapper .sl-counter,
+.sl-close,
+.sl-prev,
+.sl-next {
+  color: rgb(255, 255, 255) !important;
 }
 
-.simple-lightbox-wrapper .sl-prev {
-  background-color: white;
+.simple-lightbox-wrapper .sl-counter {
+  position: absolute !important;
+  left: 1.11% !important;
+  top: 2.3% !important;
+  color: rgb(255, 255, 255) !important;
+  font-family: Montserrat, sanf-serif;
+  font-weight: 400;
 }
