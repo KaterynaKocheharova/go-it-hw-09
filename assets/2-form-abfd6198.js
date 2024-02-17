@@ -1,0 +1,2 @@
+const e=document.querySelector(".feedback-form"),r=e.email,g=e.message,s="feedback-form-state",m=JSON.parse(localStorage.getItem(s))||{email:"",message:""};r.value=m.email;g.value=m.message;e.addEventListener("input",a=>{const t=JSON.parse(localStorage.getItem(s));a.target===e.email&&(t.email=a.target.value),a.target===e.message&&(t.message=a.target.value);const o=JSON.stringify(t);localStorage.setItem(s,o)});
+//# sourceMappingURL=2-form-abfd6198.js.map
