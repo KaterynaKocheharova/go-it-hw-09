@@ -8,6 +8,7 @@ const message = form.message;
 
 const storageKey = 'feedback-form-state';
 
+// Ensure formDataObject is always assigned a valid object
 const formDataObject = JSON.parse(localStorage.getItem(storageKey)) || {
   email: '',
   message: '',
@@ -20,16 +21,23 @@ message.value = formDataObject.message;
 // ADDING DATA TO LOCAL STORAGE
 
 form.addEventListener('input', event => {
-  const currentData = JSON.parse(localStorage.getItem(storageKey));
-
   if (event.target === form.email) {
-    currentData.email = event.target.value;
+    formDataObject.email = event.target.value;
   }
 
   if (event.target === form.message) {
-    currentData.message = event.target.value;
+    formDataObject.message = event.target.value;
   }
 
-  const updatedData = JSON.stringify(currentData);
+  const updatedData = JSON.stringify(formDataObject);
   localStorage.setItem(storageKey, updatedData);
+});
+
+// ==================================================== FORM SUBMIT ===========================================================
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  localStorage.removeItem(storageKey);
+  console.log('Email:', event.target.elements.email.value);
+  console.log('Message:', event.target.elements.message.value);
 });
