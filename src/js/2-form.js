@@ -22,11 +22,11 @@ message.value = formDataObject.message;
 
 form.addEventListener('input', event => {
   if (event.target === form.email) {
-    formDataObject.email = event.target.value;
+    formDataObject.email = event.target.value.trim();
   }
 
   if (event.target === form.message) {
-    formDataObject.message = event.target.value;
+    formDataObject.message = event.target.value.trim();
   }
 
   const updatedData = JSON.stringify(formDataObject);
@@ -36,8 +36,12 @@ form.addEventListener('input', event => {
 // ==================================================== FORM SUBMIT ===========================================================
 
 form.addEventListener('submit', event => {
-  event.preventDefault();
-  localStorage.removeItem(storageKey);
-  console.log('Email:', event.target.elements.email.value);
-  console.log('Message:', event.target.elements.message.value);
+  if (email.value && message.value) {
+    event.preventDefault();
+    localStorage.removeItem(storageKey);
+    console.log('Email:', event.target.elements.email.value);
+    console.log('Message:', event.target.elements.message.value);
+  } else {
+    alert('Fill in all the fields');
+  }
 });
