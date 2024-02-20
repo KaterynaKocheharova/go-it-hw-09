@@ -18,7 +18,7 @@ const formDataObject = JSON.parse(localStorage.getItem(storageKey)) || {
 email.value = formDataObject.email;
 message.value = formDataObject.message;
 
-// ADDING DATA TO CURRENT DATA OBJECT
+// INPUT: ADDING DATA TO CURRENT DATA OBJECT
 
 form.addEventListener('input', event => {
   if (event.target === form.email) {

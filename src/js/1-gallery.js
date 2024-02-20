@@ -93,7 +93,7 @@ const galleryMarkup = images
 
 gallery.insertAdjacentHTML('afterbegin', galleryMarkup);
 
-// =========================================CREATING SIMPLE LIGHTBOX =============================================
+// ========================================= CREATING SIMPLE LIGHTBOX =============================================
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
