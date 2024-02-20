@@ -4,21 +4,21 @@ const form = document.querySelector('.feedback-form');
 const email = form.email;
 const message = form.message;
 
-// SETTING LOCAL STORAGE
+// CREATING OBJECT TO STORE CURRENT DATA
 
 const storageKey = 'feedback-form-state';
 
-// Ensure formDataObject is always assigned a valid object
 const formDataObject = JSON.parse(localStorage.getItem(storageKey)) || {
   email: '',
   message: '',
 };
 
-// SETTING VALUE TO FORM FIELDS DURING PAGE LOAD
+// SETTING VALUES OF FORM FIELDS DURING PAGE LOAD
+
 email.value = formDataObject.email;
 message.value = formDataObject.message;
 
-// ADDING DATA TO LOCAL STORAGE
+// ADDING DATA TO CURRENT DATA OBJECT
 
 form.addEventListener('input', event => {
   if (event.target === form.email) {
@@ -29,11 +29,13 @@ form.addEventListener('input', event => {
     formDataObject.message = event.target.value.trim();
   }
 
+  // ADDING CURRENT DATA TO LOCAL STORAGE
+
   const updatedData = JSON.stringify(formDataObject);
   localStorage.setItem(storageKey, updatedData);
 });
 
-// ==================================================== FORM SUBMIT ===========================================================
+// FORM SUBMIT
 
 form.addEventListener('submit', event => {
   if (email.value && message.value) {
