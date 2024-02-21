@@ -41,9 +41,12 @@ form.addEventListener('submit', event => {
   if (email.value && message.value) {
     event.preventDefault();
     localStorage.removeItem(storageKey);
-    console.log('Email:', event.target.elements.email.value);
-    console.log('Message:', event.target.elements.message.value);
+    console.log('Email:', {
+      email: event.target.elements.email.value,
+      message: event.target.elements.message.value,
+    });
   } else {
     alert('Fill in all the fields');
   }
+  form.reset();
 });
