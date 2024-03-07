@@ -38,6 +38,7 @@ form.addEventListener('input', event => {
 // FORM SUBMIT
 
 form.addEventListener('submit', event => {
+  
   if (email.value && message.value) {
     event.preventDefault();
     localStorage.removeItem(storageKey);
@@ -50,3 +51,11 @@ form.addEventListener('submit', event => {
   }
   form.reset();
 });
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+

@@ -74,29 +74,20 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-const galleryMarkup = images
-  .map(({ preview, original, description }) => {
-    return `
-    <li class="gallery-item">
-      <a class="gallery-link" href="${original}">
-        <img
-          class="gallery-image"
-          src="${preview}"
-          alt="${description}"
-          width="360"
-          height="200"
-        />
-      </a>
-    </li>`;
-  })
-  .join(' ');
+gallery.insertAdjacentHTML('beforeend', createGalleryMarkup(images));
 
-gallery.insertAdjacentHTML('afterbegin', galleryMarkup);
+function createGalleryMarkup(arr) {
+  return arr
+    .map(
+      ({ preview, original, description }) =>
+        `<li class="gallery-item"><a class="gallery-link" href="${original}"><img class="gallery-image" src="${preview}" alt="${description}"></a></li>`
+    )
+    .join('');
+}
 
 // ========================================= CREATING SIMPLE LIGHTBOX =============================================
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  captions: true,
   captionsData: 'alt',
   captionDelay: 250,
   className: 'simple-lightbox-wrapper',
